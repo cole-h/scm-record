@@ -464,7 +464,7 @@ enum ToggleSideEffects {
 pub struct Recorder<'state, 'input> {
     state: RecordState<'state>,
     input: &'input mut dyn RecordInput,
-    pending_events: Vec<Event>,
+    pub pending_events: Vec<Event>,
     use_unicode: bool,
     commit_view_mode: CommitViewMode,
     expanded_items: HashSet<SelectionKey>,
